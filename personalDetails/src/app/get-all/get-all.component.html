@@ -1,0 +1,26 @@
+
+<h3>Get ALL</h3> <br> <br>
+<div class="container">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Address</th>
+            <th scope="col">Height</th>
+            <th scope="col">Weight</th>
+            <th scope="col">Hobbies</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="personaldetails | async as details">
+          <tr *ngFor="let detail of details">
+            <td> {{detail.name}} </td>
+            <td>{{detail.dob}}</td>
+            <td>  {{detail.address}} </td>
+            <td>  {{detail.height}} </td>
+            <td> {{detail.weight}} </td>
+            <td> {{detail.hobbies}} </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
